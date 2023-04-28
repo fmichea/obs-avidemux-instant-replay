@@ -138,4 +138,24 @@ again forces the script to move on.
 
 # How does this work?
 
-TODO
+## OBS Python Script
+
+This script monitors scene changes in OBS.
+
+When the scene is changed to the special instant replay scene, the script triggers an
+AutoHotKey script (InstantReplay_Start.ahk) and monitors the directory where instant
+replays are saved. As soon as an instant replay is saved, it will open it in Avidemux.
+
+When the scene is changed away from the special scene, it triggers InstantReplay_Stop.ahk
+
+## InstantReplay_Start.ahk
+
+This script does the following:
+
+1. It focuses on OBS window and hits the "Save Replay Buffer" keybind (Ctrl-Shift-F7) key to save a replay buffer.
+2. It waits for Avidemux to open up (this will be triggered by the script)
+3. Once Avidemux is open, it seeks to the end of the timeline, goes back a few keyframes, then starts replay.
+
+## InstantReplay_Stop.ahk
+
+This script finds all avidemux windows and closes them.
