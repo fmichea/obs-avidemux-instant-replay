@@ -21,7 +21,7 @@ Download and install all of the following programs:
 - Notepad++: https://notepad-plus-plus.org/downloads/
 
 Download all scripts available under the following directory somewhere on your computer:
-- https://github.com/fmichea/obs-avidemux-instant-replaytree/master/src
+- https://github.com/fmichea/obs-avidemux-instant-replay/tree/main/src
 
 ## OBS Setup (from scratch)
 
